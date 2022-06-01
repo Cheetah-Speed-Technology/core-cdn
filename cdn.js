@@ -3,7 +3,7 @@ function Ourpass() {
   this.dStyle = {
     ourpassParentModal: `
     position: fixed;
-    z-index: 1;
+    z-index: 999999;
     top: 0;
     left: 0;
     background-color: rgba(0,0,0,0.4);
