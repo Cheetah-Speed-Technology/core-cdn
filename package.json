@@ -6,6 +6,11 @@
   "scripts": {
     "minify": "minify cdn.js > cdn.min.js"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run minify"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Cheetah-Speed-Technology/core-cdn.git"
@@ -18,5 +23,8 @@
   "homepage": "https://github.com/Cheetah-Speed-Technology/core-cdn#readme",
   "dependencies": {
     "minify": "^9.0.0"
+  },
+  "devDependencies": {
+    "husky": "^8.0.1"
   }
 }
