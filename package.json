@@ -1,0 +1,22 @@
+{
+  "name": "core-cdn",
+  "version": "1.0.0",
+  "description": "OurPass Core CDN",
+  "main": "cdn.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cheetah-Speed-Technology/core-cdn.git"
+  },
+  "author": "Wisdom Ekpot <wisdomekpot@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cheetah-Speed-Technology/core-cdn/issues"
+  },
+  "homepage": "https://github.com/Cheetah-Speed-Technology/core-cdn#readme",
+  "dependencies": {
+    "minify": "^9.0.0"
+  }
+}
