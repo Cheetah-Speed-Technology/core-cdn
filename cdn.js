@@ -26,12 +26,12 @@ function Ourpass() {
     }
   };
 
-  this.config = {};
-}
+  this.config = {};}
 
 Ourpass.prototype.generateIframeSrc = function () {
   const items = this.clientInfo.items ? JSON.stringify(this.clientInfo.items) : '';
-  const src = `${this.config.baseUrl}/checkout/?src=${this.clientInfo.src}&items=${items}&amount=${this.clientInfo.amount}&url=${this.clientInfo.url}&name=${this.clientInfo.name}&email=${this.clientInfo.email}&qty=${this.clientInfo.qty}&description=${this.clientInfo.description}&api_key=${this.clientInfo.api_key}&reference=${this.clientInfo.reference}&metadata=${this.clientInfo.metadata}&subAccountAuthKey=${this.clientInfo.subAccountAuthKey}`;
+  const metaData = this.clientInfo.metadata ? JSON.stringify(this.clientInfo.metadata) : '';
+  const src = `${this.config.baseUrl}/checkout/?src=${this.clientInfo.src}&items=${items}&amount=${this.clientInfo.amount}&url=${this.clientInfo.url}&name=${this.clientInfo.name}&email=${this.clientInfo.email}&qty=${this.clientInfo.qty}&description=${this.clientInfo.description}&api_key=${this.clientInfo.api_key}&reference=${this.clientInfo.reference}&metadata=${metaData}&subAccountAuthKey=${this.clientInfo.subAccountAuthKey || ''}`;
   return src;
 };
 
