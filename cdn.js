@@ -31,7 +31,8 @@ function Ourpass() {
 Ourpass.prototype.generateIframeSrc = function () {
   const items = this.clientInfo.items ? JSON.stringify(this.clientInfo.items) : '';
   const metaData = this.clientInfo.metadata ? JSON.stringify(this.clientInfo.metadata) : '';
-  const src = `${this.config.baseUrl}/checkout/?src=${this.clientInfo.src}&items=${items}&amount=${this.clientInfo.amount}&url=${this.clientInfo.url}&name=${this.clientInfo.name}&email=${this.clientInfo.email}&qty=${this.clientInfo.qty}&description=${this.clientInfo.description}&api_key=${this.clientInfo.api_key}&reference=${this.clientInfo.reference}&metadata=${metaData}&subAccountAuthKey=${this.clientInfo.subAccountAuthKey || ''}`;
+  const subAccountAuthKey = this.clientInfo.subAccountAuthKey ? `&subAccountAuthKey=${this.clientInfo.subAccountAuthKey}` : '';
+  const src = `${this.config.baseUrl}/checkout/?src=${this.clientInfo.src}&items=${items}&amount=${this.clientInfo.amount}&url=${this.clientInfo.url}&name=${this.clientInfo.name}&email=${this.clientInfo.email}&qty=${this.clientInfo.qty}&description=${this.clientInfo.description}&api_key=${this.clientInfo.api_key}&reference=${this.clientInfo.reference}&metadata=${metaData}${subAccountAuthKey}`;
   return src;
 };
 
