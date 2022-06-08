@@ -4,9 +4,9 @@
   "description": "OurPass Core CDN",
   "main": "cdn.js",
   "scripts": {
-    "minify": "minify cdn.js > cdn.min.js"
+    "minify": "minify cdn.js > cdn.min.js",
+    "prepare": "husky install"
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Cheetah-Speed-Technology/core-cdn.git"
@@ -21,6 +21,6 @@
     "minify": "^9.0.0"
   },
   "devDependencies": {
-    "husky": "^8.0.1"
+    "husky": "^8.0.0"
   }
 }
