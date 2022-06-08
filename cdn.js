@@ -97,8 +97,8 @@ Ourpass.prototype.openIframe = function (clientInfo, btnId) {
   }
   this.clientInfo = clientInfo;
 
-  switch (clientInfo.env) {
-    case 'sandbox':
+  switch (clientInfo.api_key.startsWith('pass_sec_test')) {
+    case true:
       this.config = this.environments.sandbox;
       break;
 
