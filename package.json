@@ -6,11 +6,7 @@
   "scripts": {
     "minify": "minify cdn.js > cdn.min.js"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run minify"
-    }
-  },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Cheetah-Speed-Technology/core-cdn.git"
